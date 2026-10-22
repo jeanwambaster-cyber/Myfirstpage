@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Digite aqui sua mensagem </h2>
+    
+    <input type="text" id="mensagem" placeholder="Digite aqui....">
+
+    <button onclick="enviarMensagem()">Enviar</button>
+    <button onclick="limparMensagem()">Limpar Mensagem</button>
+
+    <p id="resultado"></p>
+
+    <script>    
+        function enviarMensagem(){
+            const texto = document.getElementById("mensagem").value;
+            document.getElementById('mensagem').value = "";
+            document.getElementById("resultado").textContent = texto;
+        
+        }
+        
+        function limparMensagem() {
+            document.getElementById("mensagem").value = "";
+            document.getElementById("resultado").textContent = "";
+        }
+
+    </script>
+</body>
+</html>
+
+
